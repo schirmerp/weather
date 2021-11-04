@@ -16,10 +16,11 @@ body{
 .section3{
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: space-between;
     height: auto;
     border: 5px solid black;
+    
 
 }
 .daily-card{
@@ -60,4 +61,42 @@ body{
 .city-auto{
     width: auto;
 }
+#jc{
+    position: absolute;
+    right: 3em;
+    bottom: 3em;
+    transform: rotate(187deg);
+}
 
+@media (max-width: 768px) {
+    
+    .section1{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .search-div{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media (max-width: 400px){
+    .section1{
+        display: none;
+    }
+    .section2{
+        display: none;
+    }
+    .section3{
+        display: none;
+    }
+    #jc{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 5em;
+        transform: rotate(90deg);
+        text-shadow: 3px 3px 5px yellow, 5px 5px 10px green;
+        
+    }
+}
